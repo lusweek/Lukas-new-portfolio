@@ -1,0 +1,634 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    transition: 0.5s;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar{
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+border-bottom: 5px solid red;
+position: fixed;
+width: 100vw;
+padding-left: 10%;
+padding-right: 10%;
+height: 50px;
+z-index: 10;
+}
+.navbar span{
+    color: red;
+}
+.navbar a{
+    margin: 10px;
+}
+.navbar :hover span{
+    color: black;
+    transform: scale(1.1);
+
+}
+.navbar h1:hover{
+    color: red;
+    transform: scale(1.1);
+}
+
+.full-logo{
+    margin-left: -1000px;
+    transition: 0.5s;
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn{
+    from{
+        margin-left: -1000px;
+    }
+    to{
+margin-left: 0;
+    }
+}
+
+
+#hero-section{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    background-color: red;
+}
+#hero-section img{
+    width: 100%;
+    opacity: 0,5;
+    object-fit: cover;
+    margin-top: 40px;
+   height: calc(100vh - 40px);  
+}
+
+.hero-image-overlay{
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height:100vh;
+    flex-direction: column;
+}
+
+.hero-image-overlay h1{
+    color: rgb(59, 59, 59);
+    font-size: 30px;
+    text-align: center;
+
+}
+
+
+
+.hero-image-overlay a{
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+    background-color: transparent;
+    padding: 20px;
+    font-size: 20px;
+    border: 2px solid rgb(59, 59, 59);
+    border-radius: 10px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    
+
+    /*Amination*/
+
+
+}
+.hero-image-overlay a:hover{
+    background-color: white;
+    color: black;
+    animation-name: shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes shake{
+0%{
+    transform: rotate(5deg);
+}
+50%{
+    transform: rotate(-5deg);
+}
+}
+
+
+
+/*Om mig*/
+#about-section{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-image: linear-gradient(0deg,rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+        url(../media/img/solnedg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0 !important;
+        color: white;
+        line-height: 25px;
+        justify-content: space-evenly;
+        background-size:cover ;
+    }
+    
+    #about-section img{ /*Bild på mig */
+        width: 40vh;
+        height: 40vh;
+        object-fit: cover;
+        border:red solid 5px;
+        border-radius: 50%;
+        margin: 20px;
+
+    
+    }
+    #about-section article{
+        width: 50vw;
+    }
+    #about-section h2{
+        border-bottom: solid red 5px;
+        border-radius: 5px;
+    }
+    
+/*Korten*/
+#service-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+#service-section article{
+    width: 270px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    min-height: 40vh;
+    padding: 0px;
+    margin-top: 10px;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+#service-section article:hover{
+box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+ }
+
+.servie-card-head-wrapper{
+    width: 100%;
+    height: 120px;
+    background-color: red;
+    color: white;
+    padding: 0;
+    border-radius: 6px 6px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#service-section i{
+background-color: black;
+font-size: 20px;
+padding: 20px;
+border-radius: 50%;
+margin-top: 20px;
+}
+
+#social-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#social-section h2{
+    font-size: 50px;
+    text-align: center;
+
+}
+
+#social-section span{
+    color: red;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.social-icons i{
+    margin: 20px;
+    font-size: 45px;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.social-icons i:hover{
+    color: red;
+}
+
+footer{
+    background-color: rgb(37, 37, 37);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:30px 0px ;
+}
+
+#contact-section form{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+#contact-section form input, 
+#contact-section form textarea{
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #acacac;
+    font-size: 15px;
+}
+
+#contact-section form input:focus, 
+#contact-section form textarea:focus{
+    outline: none;
+    box-shadow: 0px 0px 2px black;
+}
+
+#contact-section form button{
+    align-self: flex-end;
+    margin-right: 5%; 
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid red;
+    color: black;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#contact-section form button:hover{
+    background-color: black;
+    color: white;
+
+}
+
+.icon-and-text-wrap{
+    display: flex;
+    margin: 40px 0px;
+    width: 90%;
+    align-items: flex-start;
+}
+
+.contact-info-wrapper p, 
+.contact-info-wrapper a, 
+.contact-info-wrapper i{
+color: wheat;
+font-size: 25px;
+margin: 15px 5px;
+}
+
+
+/*För storskärm*/
+@media screen and (min-width: 800px) {
+    .mobile-logo, .mobile-menu, .menu-btn{
+        display: none;
+    }
+   
+}
+
+/*Modal start*/
+
+#service-modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 15;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.service-modal{
+    width: 50%;
+    height: 50vh;
+    background-color: white;
+    border-radius: 7px;
+
+}
+
+.molad-header{
+    width: 100%;
+    border-radius: 7px 7px 0 0 ;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.modal-header span{
+cursor: pointer;
+}
+
+#service-modal-content{
+    padding: 10px;
+}
+
+#service-modal-content img{
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
+
+/*next and prev btn start*/
+
+.thumbnail, .lb-thumbnail{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 2px 2px 2px 2px;
+}
+
+#thumbnails-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+    background-color: #acacac;
+}
+
+#main-img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.main-image-wrapper{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+}
+
+#prev-btn, #next-btn, #lb-prev-btn, #lb-next-btn {
+    position: absolute;
+    top: 40%;
+    background-color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0,5s;
+    border-radius: 5px 5px 0 0;
+
+}
+
+#prev-btn :hover, #next-btn :hover, #lb-next-btn :hover, #lb-prev-btn :hover{
+   background-color: red;
+   color: white;
+}
+
+#prev-btn, #lb-prev-btn{
+left: 0;
+border-radius: 5px 5px 0 0;
+}
+#next-btn, #lb-next-btn{
+    right: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+
+/*next and prev btn end*/
+
+
+/*Modal end*/
+
+/* Modal 2.0 start*/
+
+#image-lightbox{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 4;
+}
+
+.lb-images-wrapper{
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    position: relative;
+}
+
+.lb-header{
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ib-header span i{
+    color: white;
+    cursor: pointer;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+#lb-main-image{
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+    border-bottom: 1px solid white;
+    display: block;
+}
+
+
+/* Modal 2.0 end*/
+
+/* "ditt medelande har skickats" */
+#message-confirmation{
+    height: 50%;
+    width: 50%;
+    position: fixed;
+    top: 20vh;
+    left: 25vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    color: black;
+}
+
+#message-confirmation button{
+    padding: 10px 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#message-confirmation button :hover{
+    background-color: red;
+    color: white;
+}
+
+.loader{
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid red;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/*för telefon*/
+@media screen and (max-width: 800px) {
+    .full-logo, nav{
+        display: none;
+    }
+    .menu-btn{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .menu-btn-burger{
+        width: 40px;
+        height: 4px;
+        background-color: black;
+        transition: 0.5s;
+    }
+
+    .menu-btn-burger::before, 
+    .menu-btn-burger::after{
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 4px;
+        background-color: black;
+        transition: 0.5s;
+    }
+    .menu-btn-burger::after{
+        transform: translateY(-10px);
+    }
+    .menu-btn-burger::before{
+        transform: translateY(10px);
+    }
+
+    #about-section{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        }
+
+        /*Mer animation, för knappen
+        Har satt transition 0.5s på menu-btn-burger
+        */
+        .menu-btn.open .menu-btn-burger{
+        transform: rotate(180deg) ;
+        transition-duration:0.5s ;
+        transition-delay: 1s ;
+        background-color: transparent;
+
+        }
+        .menu-btn.open .menu-btn-burger::before{
+            transform: rotate(45deg);
+        }
+        .menu-btn.open .menu-btn-burger::after{
+            transform: rotate(-45deg);
+        }
+
+        .mobile-menu{
+            height: calc(100vh - 40px);
+            width: 80%;
+            background-color: red;
+            position: fixed;
+            margin-top: 40px;
+            z-index: 20;
+            right: -100%;
+            transition: 1s;
+            opacity: 0.8;
+
+        }
+
+        .mobile-link-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+        }
+        .mobile-link{
+            margin: 10px;
+            font-size: 25px;
+        }
+
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--HAR JAG STAVAT RÄTT??? DESCRIBTION-->
+    <meta name="describtion" content="Cristia's web services and other cool stuff"> 
+    <title>Lukas Portfolio</title>
+    <script src="https://use.fontawesome.com/bf0334d3c9.js"></script>
+</head>
+<body>
+
+    <!--Modal start-->
+    <div id="service-modal-wrapper">
+        <div class="service-modal">
+            <div class="molad-header">
+                <span onclick="closeServiceModal()"><i class="fa fa-times"></i> </span>
+            </div>
+            <div id="service-modal-content">
+
+            </div>
+        </div>
+    </div>
+    <!--Modal end-->
+
+
+    <header  class="navbar">
+        <h1 class="full-logo"><span>L</span>ukas <span>P</span>ortfolio</h1>
+        <h1 class="mobile-logo"><span>L's P</span></h1>
+        <nav>
+            <a  href="#hero-section">Home</a>
+            <a  href="#service-section">Services</a>
+            <a  href="#about-section">About</a>
+            <a  href="#contact-section">Contact</a>
+        </nav>
+        
+             <div class="menu-btn"> 
+                <div class="menu-btn-burger"></div>
+            </div>
+    </header>
+    <div class="mobile-menu">
+        <nav>
+            <a class="mobile-link" href="#hero-section">Home</a>
+            <a class="mobile-link" href="#service-section">Services</a>
+            <a class="mobile-link" href="#about-section">About</a>
+            <a class="mobile-link" href="#contact-section">Contact</a>
+        </nav>
+    </div>
+    <section id="hero-section">
+        <!--
+        <video autoplay muted loop>
+            <source src="../lukas-new-portfolio/media/video/pexels-polina-kovaleva-6185655.mp4" type="video/mp4">
+            Can't play video, sorry...
+        </video>
+        -->
+        <img src="../lukas-new-portfolio/media/img/jackie-hutchinson--FYKOM90DII-unsplash.jpg" alt="">
+
+        <div class="hero-image-overlay">
+            <h1>Welcome to Lukas portfolio!</h1>
+            <a href="#about-section"> Click here to learn about me</a>
+        </div>
+    </section>
+
+    <section id="about-section">
+        <div>
+            <img src="../lukas-new-portfolio/media/img/På mig 2.JPG" alt="A wonderful picure of me">
+        </div>
+            <article>
+                <h2>Who's Lukas?</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia animi praesentium ex commodi molestias consectetur explicabo quo assumenda repellendus delectus aliquid provident, dolore rerum quia ducimus quas esse totam. Error!</p>
+            </article>
+    </section>
+
+    <section id="service-section">
+        <article class="servise-card">
+            <div class="servie-card-head-wrapper">
+            <i class="fa fa-code" aria-hidden="true"></i>
+             <h3>Frontend Development</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque repellat illum vero assumenda doloremque. Inventore, sequi. Soluta reiciendis veniam dicta, harum consequatur incidunt voluptatibus, reprehenderit eaque obcaecati provident quidem libero.</p>
+        </article>
+        <!--
+        <article class="servise-card">
+            <div class="servie-card-head-wrapper">
+                <i></i>
+                <h3>Backend Development</h3>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit illo molestiae atque optio libero numquam quaerat, quod blanditiis expedita, nam quos ad quia, alias delectus iusto fugit reprehenderit maiores mollitia!</p>
+        </article>
+        <article class="servise-card">
+            <div class="servie-card-head-wrapper">
+                <i></i>
+                <h3>UX design</h3>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam enim illo sint architecto eius pariatur unde quas nisi necessitatibus maiores amet voluptatibus dignissimos culpa quos, repellat iure est corrupti magni.</p>
+        </article>
+        -->
+        <article class="servise-card">
+            <div class="servie-card-head-wrapper">
+                <i class="fa fa-star" aria-hidden="true"></i>                <h3>Coutching</h3>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae temporibus reiciendis, harum quaerat iure est odio atque ipsum, praesentium culpa hic! Natus ratione modi possimus illum, quibusdam soluta temporibus aut!</p>
+        </article>
+    </section>
+        <section id="social-section">
+            <h2><span>S</span>hare stuff <span>W</span>ith us!</h2>
+            <div class="social-icons">
+                <i><i class="fa fa-instagram" aria-hidden="true"></i>
+</i>
+                <i><i class="fa fa-facebook-official" aria-hidden="true"></i>
+            </i>
+                <i><i class="fa fa-envelope" aria-hidden="true"></i>
+            </i>
+            </div>
+        </section>
+
+        <div id="image-lightbox">
+            <div class="lb-images-wrapper">
+                <div class="lb-header">
+                    <span onclick="closeLightBox()"><i class="fa fa-times"></i></span>
+                </div>
+                <div class="lb-name-image-wrapper">
+                    <img id="lb-main-image" src="" alt="Va fin du är!">
+                    <span id="lb-next-btn" onclick="nextLbImage()"><i class="fa fa-chevron-right"></i></span>
+                    <span id="lb-prev-btn" onclick="prevLbImage()"><i class="fa fa-chevron-left"></i></span> 
+                </div>
+                <div id="lb-thumbnails-wrapper">
+
+                </div>
+            </div>
+        </div>
+
+        <!--picures prev next start -->
+        <section id="imeges-section">
+            <main class="main-image-wrapper">
+                <img onclick="openLightBox(this.src)" id="main-img" src="" alt="Can't load imgage">
+                <span id="prev-btn"><i class="fa fa-chevron-left"></i></span>
+                <span id="next-btn"><i class="fa fa-chevron-right"></i></span>
+            </main>
+            <div id="thumbnails-wrapper">
+
+            </div>
+        <!--picures prev next end -->
+
+        </section>
+    <footer id="contact-section">
+
+        <div id="message-confirmation">
+            <span class="loader"></span>
+        </div>
+
+        <h2>Contact me! (I'm single)</h2>
+        <form onsubmit="sendFormInfo() ; return false">
+            <input id="email" type="text" placeholder="Email" required />
+            <input id="subject" type="text" placeholder="Subject" required />
+            <textarea id="message" placeholder="White you'r message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+            
+            <div class="contact-info-wrapper">
+                <div class="icon-and-text-wrap">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <a href="mailto:lukash@live.se"> Mail me!</a>
+                </div>
+                <div class="icon-and-text-wrap">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <a href="tel:+46738546407"> Call me!</a>
+                </div>  
+                <div class="adress-wrapper">
+                    <strong><p>Adress</p></strong>
+                    <p>Hjortronvägen 4</p>
+                    <p>44837</p>
+                    <p>Floda</p>
+                </div>
+            </div>
+           
+    </footer>
+    <script src="../lukas-new-portfolio/script/app.js">
+    </script>
+</body>
+</html>
